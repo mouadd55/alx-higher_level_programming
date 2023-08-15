@@ -2,5 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for column in range(len(row)):
-            print("{:d}".format(column), end="" if column == len(row) - 1 else " ")
+            print(
+                "{:d}".format(column),
+                end="" if column == len(row) - 1 else " ")
         print()
