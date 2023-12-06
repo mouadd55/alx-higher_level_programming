@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp = *head;
 	int content[2048];
 	int i = 0;
-	int idx, max;
+	int idx, m;
 
 	if (!head || !(*head))
 		return (1);
@@ -22,10 +22,10 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 	if (i % 2 == 0)
-		max = i / 2;
+		m = i / 2;
 	else
-		(i + 1) / 2;
-	for (idx = 0; idx < max; idx++)
+		m = (i + 1) / 2;
+	for (idx = 0; idx < m; idx++)
 	{
 		if (content[idx] != content[i - 1 - idx])
 			return (0);
